@@ -124,7 +124,7 @@ loadcaptcha:
     mov rdi, 4096
     call malloc
     test rax,rax
-    jle error
+    jle loaderror
 
     mov r8,rax ;r8 malloc pointer
 
@@ -147,7 +147,7 @@ loadcaptcha:
     test rax,rax
     jle loaderror
     cmp rax,4096
-    jge error
+    jge loaderror
     
     mov r10,rax ;r10 filesize
 
